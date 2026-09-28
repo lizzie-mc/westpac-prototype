@@ -1,0 +1,43 @@
+/* GEL design system */
+@import "@westpac/style-config/tailwind";
+@import "@westpac/style-config/themes/wbc";
+/* Scan GEL components for utility classes */
+@source "../../node_modules/@westpac/ui/src";
+
+/* iOS tokens (our custom overrides on top of GEL) */
+@import "./ios-tokens.css";
+
+@import "tailwindcss";
+
+/* Global resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--ios-font);
+  font-size: var(--ios-text-body);
+  background: #1a1a2e;          /* demo page background */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent text selection during drag gestures */
+.no-select {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* iOS momentum scrolling */
+.ios-scroll {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}

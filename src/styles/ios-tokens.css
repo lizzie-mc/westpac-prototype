@@ -1,0 +1,73 @@
+/* iOS Design Tokens — override or extend these per screen */
+
+:root {
+  /* Colours */
+  --ios-bg: #f2f2f7;
+  --ios-surface: #ffffff;
+  --ios-surface-2: #f2f2f7;
+  --ios-label: #000000;
+  --ios-label-secondary: rgba(60, 60, 67, 0.6);
+  --ios-label-tertiary: rgba(60, 60, 67, 0.3);
+  --ios-separator: rgba(60, 60, 67, 0.29);
+  --ios-blue: #007aff;
+  --ios-green: #34c759;
+  --ios-red: #ff3b30;
+  --ios-orange: #ff9500;
+  --ios-destructive: #ff3b30;
+
+  /* Westpac brand overrides */
+  --brand-red: #da1710;
+  --brand-red-dark: #b81210;
+
+  /* Typography */
+  --ios-font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", system-ui, sans-serif;
+  --ios-font-rounded: "SF Pro Rounded", -apple-system, system-ui, sans-serif;
+
+  /* Font sizes (iOS HIG scale) */
+  --ios-text-large-title: 34px;
+  --ios-text-title1: 28px;
+  --ios-text-title2: 22px;
+  --ios-text-title3: 20px;
+  --ios-text-headline: 17px;
+  --ios-text-body: 17px;
+  --ios-text-callout: 16px;
+  --ios-text-subhead: 15px;
+  --ios-text-footnote: 13px;
+  --ios-text-caption1: 12px;
+  --ios-text-caption2: 11px;
+
+  /* Border radius */
+  --ios-radius-sheet: 12px;
+  --ios-radius-card: 10px;
+  --ios-radius-button: 14px;
+  --ios-radius-input: 10px;
+  --ios-radius-full: 9999px;
+
+  /* Shadows */
+  --ios-shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --ios-shadow-sheet: 0 -2px 20px rgba(0, 0, 0, 0.12);
+
+  /* Safe areas (overridden by env() on real devices) */
+  --safe-top: env(safe-area-inset-top, 59px);
+  --safe-bottom: env(safe-area-inset-bottom, 34px);
+
+  /* Bottom sheet */
+  --sheet-handle-color: rgba(60, 60, 67, 0.3);
+  --sheet-backdrop: rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode tokens */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ios-bg: #000000;
+    --ios-surface: #1c1c1e;
+    --ios-surface-2: #2c2c2e;
+    --ios-label: #ffffff;
+    --ios-label-secondary: rgba(235, 235, 245, 0.6);
+    --ios-label-tertiary: rgba(235, 235, 245, 0.3);
+    --ios-separator: rgba(84, 84, 88, 0.6);
+    --ios-blue: #0a84ff;
+    --ios-green: #30d158;
+    --ios-red: #ff453a;
+  }
+}
